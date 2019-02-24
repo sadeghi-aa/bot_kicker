@@ -17,10 +17,11 @@
 					$ch = curl_init();    					
 					$chat_id = $message['chat']['id'];
 					if($adder_kicked == false) {
-					    $adder_id = $message['from']['id'];
-					    curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot$token/kickChatMember?chat_id=$chat_id&user_id=$adder_id");
-    					curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    					curl_exec($ch);		    
+						$adder_id = $message['from']['id'];
+						curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot$token/kickChatMember?chat_id=$chat_id&user_id=$adder_id");
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						curl_exec($ch);		    
+						$adder_kicked = true;
 					}
 					curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot$token/kickChatMember?chat_id=$chat_id&user_id=$bot_id");
 					curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
