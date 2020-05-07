@@ -4,4 +4,4 @@ It will automatically remove any bot that gets added to the group immediately as
 Exceptions are not yet available but hopefully will be added eventually!
 
 ### Both in Python and PHP.
-### Edit the token variable.
+### Just edit the token variable.
